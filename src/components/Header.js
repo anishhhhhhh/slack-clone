@@ -50,6 +50,14 @@ const HeaderLeft = styled.div`
   }
 `;
 
+const HeaderAvatar = styled(Avatar)`
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.8;
+  }
+`;
+
 const HeaderSearch = styled.div`
   flex: 0.4;
   opacity: 1;
@@ -79,13 +87,5 @@ const HeaderRight = styled.div`
   > .MuiSvgIcon-root {
     margin-left: auto;
     margin-right: 20px;
-  }
-`;
-
-const HeaderAvatar = styled(Avatar)`
-  cursor: pointer;
-
-  :hover {
-    opacity: 0.8;
   }
 `;
