@@ -27,7 +27,7 @@ const Sidebar = () => {
     <SidebarContainer>
       <SidebarHeader>
         <SidebarInfo>
-          <h2>PAPA FAM HQ</h2>
+          <h2>SLACK FAM HQ</h2>
           <h3>
             <FiberManualRecordIcon />
             {user.displayName}

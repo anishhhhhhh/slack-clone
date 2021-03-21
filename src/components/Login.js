@@ -19,8 +19,8 @@ const Login = () => {
           src="https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png"
           alt=""
         />
-        <h1>Sign In to the papa fam</h1>
-        <p>papa.slack.com</p>
+        <h1>Sign in to the OG Slack </h1>
+        <p>slack.com</p>
 
         <Button onClick={signIn}>Sign in with Google</Button>
       </LoginInnerContainer>
