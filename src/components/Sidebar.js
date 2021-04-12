@@ -16,6 +16,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import AddIcon from "@material-ui/icons/Add";
 import { db, auth } from "../firebase";
 
+import AddChannelModal from "./AddChannelModal";
 import SidebarOption from "./SidebarOption";
 import { useAuthState } from "react-firebase-hooks/auth/";
 
@@ -35,7 +36,6 @@ const Sidebar = () => {
         </SidebarInfo>
         <CreateIcon />
       </SidebarHeader>
-
       <SidebarOption Icon={InsertCommentIcon} title="Threads" />
       <SidebarOption Icon={InboxIcon} title="Mentions & Reactions" />
       <SidebarOption Icon={DraftsIcon} title="Saved Items" />
@@ -47,7 +47,8 @@ const Sidebar = () => {
       <hr />
       <SidebarOption Icon={ExpandMoreIcon} title="Channels" />
       <hr />
-      <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" />
+      <AddChannelModal />
+      {/* <SidebarOption Icon={AddIcon} addChannelOption title="Add Channel" /> */}
       {channels?.docs.map((doc) => (
         <SidebarOption key={doc.id} id={doc.id} title={doc.data().name} />
       ))}
@@ -95,7 +96,7 @@ const SidebarInfo = styled.div`
   > h3 {
     display: flex;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 13px !important;
     align-items: center;
   }
   > h3 > .MuiSvgIcon-root {
