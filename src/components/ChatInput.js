@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { Button } from "@material-ui/core";
 import { db, auth } from "../firebase";
 import firebase from "firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+
+import { Chatbackground, ChatInputContainer } from "../styles/ChatInput.styled";
 
 const ChatInput = ({ channelId, channelName, chatRef }) => {
   const [input, setInput] = useState("");
@@ -49,27 +50,3 @@ const ChatInput = ({ channelId, channelName, chatRef }) => {
 };
 
 export default ChatInput;
-
-const Chatbackground = styled.div``;
-
-const ChatInputContainer = styled.div`
-  border-radius: 20px;
-
-  > form {
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  > form > input {
-    position: fixed;
-    bottom: 30px;
-    width: 60%;
-    border: 1px solid gray;
-    border-radius: 3px;
-    padding: 20px;
-    outline: none;
-  }
-  > form > button {
-    display: none !important;
-  }
-`;
